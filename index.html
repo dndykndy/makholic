@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>makholic – 막걸리의 세계를 발견하세요</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/makholic-logo.png" alt="makholic logo" class="brand-logo" />
+                    <span class="sr-only">makholic</span>
+                </div>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#discover" class="nav-link" data-en="Discover" data-ja="ディスカバー" data-ko="디스커버">Discover</a>
+                    </li>
+                </ul>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="en">English</button>
+                    <button class="lang-btn" data-lang="ja">日本語</button>
+                    <button class="lang-btn" data-lang="ko">한국어</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-banner">
+                <div class="hero-logo-container">
+                    <img src="assets/makholic_logo.jpg" alt="makholic" class="hero-main-logo" />
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Discover the world of Makgeolli" data-ja="マッコリの世界を発見しよう" data-ko="막걸리의 세계를 발견하세요">
+                        Discover the world of Makgeolli
+                    </h1>
+                    <p class="hero-subtitle" data-en="Experience Korea's traditional rice wine with rich history and unique taste" data-ja="豊かな歴史と独特な味わいを持つ韓国の伝統米酒を体験しよう" data-ko="풍부한 역사와 독특한 맛을 가진 한국의 전통 막걸리를 경험하세요">
+                        Experience Korea's traditional rice wine with rich history and unique taste
+                    </p>
+                    <button class="cta-button" data-en="Start Exploring" data-ja="探検を始めよう" data-ko="탐험 시작하기">
+                        Start Exploring
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discover Section -->
+        <section id="discover" class="discover-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Discover" data-ja="ディスカバー" data-ko="디스커버">Discover</h2>
+                <p class="discover-intro" 
+                   data-en="Explore more makgeolli stories from our Instagram. Latest posts appear here when configured." 
+                   data-ja="Instagramからのマッコリ情報をチェック。設定すると最新の投稿がここに表示されます。" 
+                   data-ko="인스타그램의 막걸리 스토리를 둘러보세요. 설정 시 최신 게시물이 여기에 표시됩니다.">
+                    Explore more makgeolli stories from our Instagram. Latest posts appear here when configured.
+                </p>
+
+                <div id="instagram-grid" class="ig-grid" aria-live="polite"></div>
+
+                <div class="discover-actions">
+                    <a class="cta-button outline" href="https://www.instagram.com/mak_holic/" target="_blank" rel="noopener" 
+                       data-en="Open Instagram" data-ja="Instagramを開く" data-ko="인스타그램 열기">
+                        Open Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="culture-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Rich History & Tradition" data-ja="豊かな歴史と伝統" data-ko="풍부한 역사와 전통">
+                    Rich History & Tradition
+                </h2>
+                <div class="culture-grid">
+                    <div class="culture-card">
+                        <div class="card-icon">📜</div>
+                        <h3 data-en="Ancient Origins" data-ja="古代の起源" data-ko="고대의 기원">Ancient Origins</h3>
+                        <p data-en="Makgeolli dates back to the Three Kingdoms period, over 1,500 years ago" data-ja="マッコリは1500年以上前の三国時代に遡る" data-ko="막걸리는 1500년 이상 전 삼국시대까지 거슬러 올라갑니다">
+                            Makgeolli dates back to the Three Kingdoms period, over 1,500 years ago
+                        </p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="card-icon">🏺</div>
+                        <h3 data-en="Traditional Brewing" data-ja="伝統醸造" data-ko="전통 양조">Traditional Brewing</h3>
+                        <p data-en="Handcrafted using traditional methods passed down through generations" data-ja="世代を超えて受け継がれた伝統的な方法で手作りされる" data-ko="세대를 거쳐 전해진 전통적인 방법으로 수작업됩니다">
+                            Handcrafted using traditional methods passed down through generations
+                        </p>
+                    </div>
+                    <div class="culture-card">
+                        <div class="card-icon">🌾</div>
+                        <h3 data-en="Rice Culture" data-ja="米文化" data-ko="쌀 문화">Rice Culture</h3>
+                        <p data-en="Deeply connected to Korea's agricultural heritage and rice farming traditions" data-ja="韓国の農業遺産と稲作伝統に深く結びついている" data-ko="한국의 농업 유산과 벼농사 전통에 깊이 연결되어 있습니다">
+                            Deeply connected to Korea's agricultural heritage and rice farming traditions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types Section -->
+        <section class="food-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Types of Makgeolli" data-ja="マッコリの種類" data-ko="막걸리의 종류">
+                    Types of Makgeolli
+                </h2>
+                <div class="food-grid">
+                    <div class="food-card">
+                        <div class="food-image">🍶</div>
+                        <h3 data-en="Traditional Makgeolli" data-ja="伝統マッコリ" data-ko="전통 막걸리">Traditional Makgeolli</h3>
+                        <p data-en="Classic rice wine with smooth, creamy texture and mild sweetness" data-ja="滑らかでクリーミーな食感とマイルドな甘さのクラシック米酒" data-ko="부드럽고 크리미한 질감과 순한 단맛의 클래식 막걸리">
+                            Classic rice wine with smooth, creamy texture and mild sweetness
+                        </p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">🌸</div>
+                        <h3 data-en="Fruit Makgeolli" data-ja="フルーツマッコリ" data-ko="과일 막걸리">Fruit Makgeolli</h3>
+                        <p data-en="Modern variations with fruits like strawberry, peach, and blueberry" data-ja="イチゴ、桃、ブルーベリーなどのフルーツを使った現代的なバリエーション" data-ko="딸기, 복숭아, 블루베리 등의 과일을 사용한 현대적인 변형">
+                            Modern variations with fruits like strawberry, peach, and blueberry
+                        </p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">🌿</div>
+                        <h3 data-en="Herbal Makgeolli" data-ja="ハーブマッコリ" data-ko="허브 막걸리">Herbal Makgeolli</h3>
+                        <p data-en="Infused with medicinal herbs for health benefits and unique flavors" data-ja="健康効果と独特な風味のために薬草を加えたもの" data-ko="건강 효과와 독특한 풍미를 위해 약초를 넣은 막걸리">
+                            Infused with medicinal herbs for health benefits and unique flavors
+                        </p>
+                    </div>
+                    <div class="food-card">
+                        <div class="food-image">🍯</div>
+                        <h3 data-en="Premium Makgeolli" data-ja="プレミアムマッコリ" data-ko="프리미엄 막걸리">Premium Makgeolli</h3>
+                        <p data-en="Craft makgeolli made with high-quality ingredients and refined brewing techniques" data-ja="高品質の原料と洗練された醸造技術で作られたクラフトマッコリ" data-ko="고품질 원료와 정교한 양조 기술로 만든 크래프트 막걸리">
+                            Craft makgeolli made with high-quality ingredients and refined brewing techniques
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pairing Section -->
+        <section class="tourism-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Perfect Food Pairings" data-ja="完璧な料理の組み合わせ" data-ko="완벽한 음식 페어링">
+                    Perfect Food Pairings
+                </h2>
+                <div class="tourism-grid">
+                    <div class="tourism-card">
+                        <div class="tourism-image">🥘</div>
+                        <h3 data-en="Korean BBQ" data-ja="韓国バーベキュー" data-ko="한국 바베큐">Korean BBQ</h3>
+                        <p data-en="Makgeolli perfectly complements grilled meats like samgyeopsal and bulgogi" data-ja="マッコリはサムギョプサルやプルコギなどの焼肉と完璧に合う" data-ko="막걸리는 삼겹살과 불고기 같은 구운 고기와 완벽하게 어울립니다">
+                            Makgeolli perfectly complements grilled meats like samgyeopsal and bulgogi
+                        </p>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image">🍜</div>
+                        <h3 data-en="Spicy Dishes" data-ja="辛い料理" data-ko="매운 요리">Spicy Dishes</h3>
+                        <p data-en="The creamy texture helps balance the heat of kimchi and spicy stews" data-ja="クリーミーな食感がキムチや辛い鍋の辛さを中和する" data-ko="크리미한 질감이 김치와 매운 찌개의 매운맛을 중화시킵니다">
+                            The creamy texture helps balance the heat of kimchi and spicy stews
+                        </p>
+                    </div>
+                    <div class="tourism-card">
+                        <div class="tourism-image">🥟</div>
+                        <h3 data-en="Street Food" data-ja="屋台料理" data-ko="길거리 음식">Street Food</h3>
+                        <p data-en="Perfect with Korean pancakes, tteokbokki, and other street snacks" data-ja="韓国パンケーキ、トッポッキ、その他の屋台スナックと完璧に合う" data-ko="한국 전, 떡볶이, 기타 길거리 간식과 완벽하게 어울립니다">
+                            Perfect with Korean pancakes, tteokbokki, and other street snacks
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modern Makgeolli Section -->
+        <section class="modern-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Modern Makgeolli Culture" data-ja="現代のマッコリ文化" data-ko="현대 막걸리 문화">
+                    Modern Makgeolli Culture
+                </h2>
+                <div class="modern-grid">
+                    <div class="modern-card">
+                        <div class="modern-icon">🏭</div>
+                        <h3 data-en="Craft Breweries" data-ja="クラフト醸造所" data-ko="크래프트 양조장">Craft Breweries</h3>
+                        <p data-en="Modern craft breweries creating innovative makgeolli varieties" data-ja="革新的なマッコリの種類を作る現代のクラフト醸造所" data-ko="혁신적인 막걸리 종류를 만드는 현대 크래프트 양조장">
+                            Modern craft breweries creating innovative makgeolli varieties
+                        </p>
+                    </div>
+                    <div class="modern-card">
+                        <div class="modern-icon">🍹</div>
+                        <h3 data-en="Cocktails & Mixes" data-ja="カクテルとミックス" data-ko="칵테일과 믹스">Cocktails & Mixes</h3>
+                        <p data-en="Creative cocktails and mixed drinks featuring makgeolli as the base" data-ja="マッコリをベースにしたクリエイティブなカクテルとミックスドリンク" data-ko="막걸리를 베이스로 한 창의적인 칵테일과 믹스드링크">
+                            Creative cocktails and mixed drinks featuring makgeolli as the base
+                        </p>
+                    </div>
+                    <div class="modern-card">
+                        <div class="modern-icon">🌍</div>
+                        <h3 data-en="Global Popularity" data-ja="世界的な人気" data-ko="글로벌 인기">Global Popularity</h3>
+                        <p data-en="Growing international interest in Korean traditional rice wine" data-ja="韓国の伝統米酒への世界的な関心の高まり" data-ko="한국 전통 막걸리에 대한 세계적인 관심 증가">
+                            Growing international interest in Korean traditional rice wine
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-en="© 2024 makholic. Experience the rich tradition of Korean rice wine." data-ja="© 2024 makholic. 韓国米酒の豊かな伝統を体験しよう。" data-ko="© 2024 makholic. 한국 막걸리의 풍부한 전통을 경험하세요.">
+                © 2024 makholic. Experience the rich tradition of Korean rice wine.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // Instagram API 설정
+        // 실제 토큰을 사용하려면 Instagram Basic Display API에서 Long-lived Access Token을 발급받아야 합니다
+        // 지금은 데모용으로 더미 데이터를 표시합니다
+        window.INSTAGRAM_CONFIG = {
+            token: null, // 실제 토큰을 여기에 입력
+            userId: 'mak_holic',
+            fallbackPosts: [
+                {
+                    id: '1',
+                    permalink: 'https://www.instagram.com/mak_holic/',
+                    media_url: 'https://picsum.photos/400/400?random=1',
+                    caption: '전통 막걸리의 깊은 맛을 느껴보세요 🍶 #막걸리 #makholic',
+                    timestamp: new Date().toISOString()
+                },
+                {
+                    id: '2', 
+                    permalink: 'https://www.instagram.com/mak_holic/',
+                    media_url: 'https://picsum.photos/400/400?random=2',
+                    caption: '한국의 전통주와 함께하는 특별한 시간 ✨ #전통주 #막걸리',
+                    timestamp: new Date(Date.now() - 86400000).toISOString()
+                },
+                {
+                    id: '3',
+                    permalink: 'https://www.instagram.com/mak_holic/', 
+                    media_url: 'https://picsum.photos/400/400?random=3',
+                    caption: '부드럽고 달콤한 막걸리의 매력 🌾 #makgeolli #korean',
+                    timestamp: new Date(Date.now() - 172800000).toISOString()
+                }
+            ]
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
