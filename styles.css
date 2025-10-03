@@ -1,0 +1,497 @@
+/* makholic design system */
+:root {
+    --cream: #f7f4e8;
+    --ink: #111111;
+    --ink-muted: #4a4a4a;
+    --border: #111111;
+    --card-bg: #ffffff;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.7;
+    color: var(--ink);
+    background-color: var(--cream);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--cream);
+    color: var(--ink);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links { display: flex; gap: 1rem; list-style: none; }
+.nav-link { text-decoration: none; color: var(--ink); font-weight: 700; border-bottom: 2px solid transparent; padding-bottom: 2px; }
+.nav-link:hover { border-bottom-color: var(--border); }
+
+.brand-logo {
+    height: 28px;
+    display: block;
+}
+
+.language-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid var(--border);
+    color: var(--ink);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover {
+    background: var(--ink);
+    color: var(--cream);
+}
+
+.lang-btn.active {
+    box-shadow: 3px 3px 0 var(--border);
+}
+
+/* Hero */
+.hero {
+    min-height: 85vh;
+    background: var(--cream);
+    color: var(--ink);
+    margin-top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-logo-container {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.hero-main-logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(17, 17, 17, 0.15);
+    transition: all 0.3s ease;
+    mix-blend-mode: multiply;
+    opacity: 0.95;
+}
+
+.hero-main-logo:hover {
+    transform: scale(1.02);
+    box-shadow: 0 30px 80px rgba(17, 17, 17, 0.2);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 2rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+}
+
+.cta-button {
+    background: transparent;
+    color: var(--ink);
+    border: 2px solid var(--border);
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 var(--border);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background: var(--ink);
+    color: var(--cream);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--border);
+}
+
+.cta-button.outline { 
+    background: transparent; 
+    color: var(--ink); 
+}
+
+.cta-button.outline:hover { 
+    background: var(--ink); 
+    color: var(--cream); 
+}
+
+/* Sections */
+section {
+    padding: 4.5rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: var(--ink);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 2px;
+    background: var(--border);
+}
+
+/* Cards */
+.culture-section,
+.food-section,
+.tourism-section,
+.modern-section {
+    background: transparent;
+}
+
+.culture-grid,
+.food-grid,
+.tourism-grid,
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.6rem;
+}
+
+.culture-card,
+.food-card,
+.tourism-card,
+.modern-card {
+    background: var(--card-bg);
+    padding: 1.6rem;
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 4px 4px 0 var(--border);
+}
+
+.culture-card:hover,
+.food-card:hover,
+.tourism-card:hover,
+.modern-card:hover {
+    transform: translate(-2px, -2px);
+}
+
+.card-icon,
+.food-image,
+.tourism-image,
+.modern-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.culture-card h3,
+.food-card h3,
+.tourism-card h3,
+.modern-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.6rem;
+}
+
+.culture-card p,
+.food-card p,
+.tourism-card p,
+.modern-card p {
+    color: var(--ink-muted);
+}
+
+/* Footer */
+.footer {
+    background: var(--cream);
+    color: var(--ink);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.footer p { opacity: 0.8; }
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(24px); transition: all 0.5s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Discover section */
+.discover-intro { 
+    text-align: center; 
+    color: var(--ink-muted); 
+    margin: 0 auto 2rem; 
+    max-width: 720px; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.ig-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 2rem; 
+    margin-bottom: 2rem;
+}
+
+.ig-card { 
+    border: 2px solid var(--border); 
+    background: var(--card-bg); 
+    border-radius: 16px; 
+    overflow: hidden; 
+    box-shadow: 6px 6px 0 var(--border); 
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ig-card:hover { 
+    transform: translate(-3px, -3px); 
+    box-shadow: 9px 9px 0 var(--border);
+}
+
+.ig-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.ig-card img { 
+    width: 100%; 
+    height: 280px; 
+    object-fit: cover; 
+    display: block; 
+    transition: transform 0.3s ease;
+}
+
+.ig-card:hover img {
+    transform: scale(1.05);
+}
+
+.ig-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 17, 17, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ig-card:hover .ig-overlay {
+    opacity: 1;
+}
+
+.ig-overlay-text {
+    color: var(--cream);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.ig-meta { 
+    padding: 1.2rem 1.4rem; 
+}
+
+.ig-caption {
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.ig-date {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    font-weight: 400;
+}
+
+.discover-actions { 
+    text-align: center; 
+    margin-top: 2rem; 
+}
+
+/* Instagram 로딩 및 에러 상태 */
+.ig-loading, .ig-empty, .ig-error {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: var(--ink-muted);
+    font-size: 1.1rem;
+    grid-column: 1 / -1;
+}
+
+.ig-error {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 var(--border);
+}
+
+.ig-error p {
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+}
+
+.ig-loading {
+    background: linear-gradient(90deg, var(--cream) 25%, #f0ede2 50%, var(--cream) 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 2s infinite;
+    border-radius: 8px;
+}
+
+@keyframes loading-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .hero-main-logo {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero { 
+        padding: 1.5rem 1rem; 
+        min-height: 80vh;
+    }
+    
+    .hero-banner {
+        padding: 0;
+    }
+    
+    .hero-logo-container {
+        margin-bottom: 2rem;
+    }
+    
+    .hero-main-logo {
+        max-width: 280px;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(17, 17, 17, 0.12);
+    }
+    
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .nav-container { 
+        padding: 0.8rem 1rem; 
+    }
+    
+    .brand-logo { 
+        height: 24px; 
+    }
+    
+    /* Instagram 모바일 반응형 */
+    .ig-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .ig-card img {
+        height: 250px;
+    }
+    
+    .ig-meta {
+        padding: 1rem;
+    }
+    
+    .discover-intro {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-main-logo {
+        max-width: 240px;
+    }
+    
+    .cta-button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.95rem;
+    }
+}
